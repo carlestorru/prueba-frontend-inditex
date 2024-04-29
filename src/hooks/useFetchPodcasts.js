@@ -9,7 +9,7 @@ export default function useFetchPodcasts() {
 	const [isFetching, setIsFetching] = useState(true);
 
 	useEffect(() => {
-		fetchAllOrigins(URL)
+		 fetchAllOrigins(URL)
 			.then((res) => {
 				const parsedData = JSON.parse(res.contents);
 				const podcasts = parsedData.feed.entry;
@@ -17,7 +17,7 @@ export default function useFetchPodcasts() {
 			})
 			.catch((err) => console.log(err))
 			.finally(() => setIsFetching(false));
-	});
+	}, []);
 
 	return [data, isFetching];
 }
