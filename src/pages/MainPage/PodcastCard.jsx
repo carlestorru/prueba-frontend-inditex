@@ -1,3 +1,5 @@
+import Card from '../../components/Card';
+
 export default function PodcastCard({ data }) {
 	return (
 		<div className='flex flex-col items-center text-center m-auto'>
@@ -6,10 +8,12 @@ export default function PodcastCard({ data }) {
 				src={data['im:image'][0].label}
 				alt={data['im:name'].label}
 			/>
-			<div className='bg-white shadow-xl pt-10 p-2 w-full'>
-				<h4>{data['im:name'].label}</h4>
-				<p>{`Author: ${data['im:artist'].label}`}</p>
-			</div>
+			<Card>
+				<div className='pt-10'>
+					<h3 className='font-bold uppercase'>{data['im:name'].label}</h3>
+					<h4 className='text-base text-gray-500'>{`Author: ${data['im:artist'].label}`}</h4>
+				</div>
+			</Card>
 		</div>
 	);
 }
