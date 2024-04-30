@@ -17,7 +17,7 @@ export default function PodcastDetails() {
 				<div className='flex flex-row justify-evenly'>
 					<PodcastCard data={state} />
 					<div className='flex flex-col gap-2 w-2/4'>
-						<EpisodesBanner numEpisodes={data.resultCount} />
+						<EpisodesBanner numEpisodes={data.results[0].trackCount} />
 						<TableOfEpisodes
 							episodes={data.results.filter(
 								(el) => el.kind === 'podcast-episode',
