@@ -4,6 +4,7 @@ import { lazy } from 'react';
 
 import Loadable from '../components/Loader/Loadable';
 import MainLayout from '../layouts/MainLayout';
+import PodcastCardLayout from '../layouts/PodcastCardLayout';
 
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 const PodcastDetail = Loadable(lazy(() => import('../pages/PodcastDetails')));
@@ -20,8 +21,12 @@ const ListOfRoutes = [
 			},
             {
 				path: 'podcast/:podcastId',
-				element: <PodcastDetail />,
+				element: <PodcastCardLayout />,
 				children: [
+					{
+						path: '',
+						element: <PodcastDetail />
+					},
 					{
 						path: 'episode/:episodeId',
 						element: <EpisodeDetail />

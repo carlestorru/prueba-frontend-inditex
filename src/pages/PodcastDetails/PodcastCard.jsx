@@ -17,7 +17,7 @@ export default function PodcastCard({ data }) {
 						<h4 className='font-normal italic'>by {data['im:artist'].label}</h4>
 					</div>
 					<div>
-						<h5 className='font-bold'>Description:</h5>
+						<h5 className='font-bold text-wrap'>Description:</h5>
 						<p>{data.summary.label}</p>
 					</div>
 				</div>
