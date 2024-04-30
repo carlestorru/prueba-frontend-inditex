@@ -8,12 +8,12 @@ export default function PodcastCard({ data }) {
 				src={data['im:image'][0].label}
 				alt={data['im:name'].label}
 			/>
-			<Card>
-				<div className='pt-10'>
-					<h3 className='font-bold uppercase'>{data['im:name'].label}</h3>
+			<div className='w-full'>
+				<Card>
+					<h3 className='pt-10 font-bold uppercase'>{data['im:name'].label}</h3>
 					<h4 className='text-base text-gray-500'>{`Author: ${data['im:artist'].label}`}</h4>
-				</div>
-			</Card>
+				</Card>
+			</div>
 		</div>
 	);
 }
