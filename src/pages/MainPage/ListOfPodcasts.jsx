@@ -15,7 +15,7 @@ export default function ListOfPodcasts() {
 					{data.map((el) => {
 						return (
 							<li key={el.id.attributes['im:id']}>
-								<Link to={`podcast/${el.id.attributes['im:id']}`}>
+								<Link to={`podcast/${el.id.attributes['im:id']}`} state={el}>
 									<PodcastCard data={el} />
 								</Link>
 							</li>
