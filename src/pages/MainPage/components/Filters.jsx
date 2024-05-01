@@ -7,10 +7,11 @@ export default function Filters() {
 		<section className='self-end'>
 			<label
 				className='bg-blue-400 p-3 text-white font-bold rounded mr-4'
-				htmlFor=''>
+				htmlFor='searchBarPodcasts'>
 				{podcasts.length}
 			</label>
 			<input
+				id='searchBarPodcasts'
 				className='p-2 border-[1px] border-gray-400 rounded'
 				type='text'
 				placeholder='Filter podcasts...'
