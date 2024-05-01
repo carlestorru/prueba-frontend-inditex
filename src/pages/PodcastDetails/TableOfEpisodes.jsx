@@ -9,7 +9,7 @@ export default function TableOfEpisodes({ episodes, state }) {
 	return (
 		<Card>
 			<table className='text-left w-full'>
-				<thead> 
+				<thead>
 					<tr className='border-b border-gray-300'>
 						<th>Title</th>
 						<th>Date</th>
@@ -18,9 +18,13 @@ export default function TableOfEpisodes({ episodes, state }) {
 				</thead>
 				<tbody>
 					{episodes.map((el, index) => (
-						<tr key={el.trackId} className={`border-b border-gray-300 ${index % 2 === 0 && 'bg-gray-200' }`}>
+						<tr
+							key={el.trackId}
+							className={`border-b border-gray-300 ${index % 2 === 0 && 'bg-gray-200'}`}>
 							<td className='text-blue-400 py-2'>
-								<Link to={`${pathname}/episode/${el.trackId}`} state={state}>
+								<Link
+									to={`${pathname}/episode/${el.trackId}`}
+									state={{ ...state, episodeUrl: el.episodeUrl }}>
 									{el.trackName}
 								</Link>
 							</td>
