@@ -6,11 +6,11 @@ import TableOfEpisodes from './components/TableOfEpisodes';
 export default function PodcastDetails() {
 	const { state } = useLocation();
 	const { podcastId } = useParams();
-	const [data, isFetching] = useFetchPodcastDetails(podcastId);
+	const { data, isLoading } = useFetchPodcastDetails(podcastId);
 
 	return (
 		<>
-			{isFetching ? (
+			{isLoading ? (
 				<p>Cargando...</p>
 			) : (
 				<div className='flex flex-col gap-2 w-2/4 max-sm:w-full'>
