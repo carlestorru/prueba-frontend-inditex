@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 
-import useFetchPodcasts from '../../../hooks/useFetchPodcasts';
 import PodcastCard from './PodcastCard';
+import { usePodcasts } from '../../../context/PodcastsContext';
+import Loader from '../../../components/Loader/Loader';
 
 export default function ListOfPodcasts() {
-	const [data, isFetching] = useFetchPodcasts();
-
+	const [podcasts, isFetching] = usePodcasts();
 	return (
-		<>
+		<section>
 			{isFetching ? (
-				<p>Cargando...</p>
+				<Loader />
 			) : (
 				<ul className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-6 gap-y-20'>
-					{data.map((el) => {
+					{podcasts.map((el) => {
 						return (
 							<li key={el.id.attributes['im:id']}>
 								<Link to={`podcast/${el.id.attributes['im:id']}`} state={el}>
@@ -23,6 +23,6 @@ export default function ListOfPodcasts() {
 					})}
 				</ul>
 			)}
-		</>
+		</section>
 	);
 }
