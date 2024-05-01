@@ -1,7 +1,7 @@
 import { useLocation, useParams } from 'react-router-dom';
 import useFetchPodcastDetails from '../../hooks/useFetchPodcastDetails';
-import EpisodesBanner from './EpisodesBanner';
-import TableOfEpisodes from './TableOfEpisodes';
+import EpisodesBanner from './components/EpisodesBanner';
+import TableOfEpisodes from './components/TableOfEpisodes';
 
 export default function PodcastDetails() {
 	const { state } = useLocation();

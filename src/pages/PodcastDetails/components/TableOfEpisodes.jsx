@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import Card from '../../components/Card';
-import { convertDateFormat } from '../../utils/convertDateFormat';
-import { convertMillisToMinutesAndSeconds } from '../../utils/convertMillis';
+import Card from '../../../components/Card';
+import { convertDateFormat } from '../../../utils/convertDateFormat';
+import { convertMillisToMinutesAndSeconds } from '../../../utils/convertMillis';
 
 export default function TableOfEpisodes({ episodes, state }) {
 	const { pathname } = useLocation();

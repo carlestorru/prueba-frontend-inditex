@@ -1,4 +1,4 @@
-import ListOfPodcasts from './ListOfPodcasts';
+import ListOfPodcasts from './components/ListOfPodcasts';
 
 export default function MainPage() {
 	return (

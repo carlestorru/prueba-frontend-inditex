@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import useFetchPodcasts from '../../hooks/useFetchPodcasts';
+import useFetchPodcasts from '../../../hooks/useFetchPodcasts';
 import PodcastCard from './PodcastCard';
 
 export default function ListOfPodcasts() {
