@@ -14,6 +14,7 @@ export default function useFetchPodcasts() {
 			const podcasts = parsedData.feed.entry;
 			return podcasts;
 		},
-		refetchInterval: 86400000 // 24 hours in millis,
+		staleTime: 1000 * 60 * 60 * 24, // 24 hours in millis
+		refetchInterval: 1000 * 60 * 60 * 24 // 24 hours in millis
 	});
 }
