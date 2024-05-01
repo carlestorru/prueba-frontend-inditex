@@ -24,7 +24,12 @@ export default function TableOfEpisodes({ episodes, state }) {
 							<td className='text-blue-400 py-2'>
 								<Link
 									to={`${pathname}/episode/${el.trackId}`}
-									state={{ ...state, episodeUrl: el.episodeUrl }}>
+									state={{
+										...state,
+										episodeUrl: el.episodeUrl,
+										description: el.description,
+										trackName: el.trackName,
+									}}>
 									{el.trackName}
 								</Link>
 							</td>
