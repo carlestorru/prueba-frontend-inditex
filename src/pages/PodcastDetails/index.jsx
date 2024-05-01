@@ -13,7 +13,7 @@ export default function PodcastDetails() {
 			{isFetching ? (
 				<p>Cargando...</p>
 			) : (
-				<div className='flex flex-col gap-2 w-2/4'>
+				<div className='flex flex-col gap-2 w-2/4 max-sm:w-full'>
 					<EpisodesBanner numEpisodes={data.results[0].trackCount} />
 					<TableOfEpisodes
 						episodes={data.results.filter(
