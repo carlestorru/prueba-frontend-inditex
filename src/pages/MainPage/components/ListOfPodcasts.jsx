@@ -5,10 +5,10 @@ import { usePodcasts } from '../../../context/PodcastsContext';
 import Loader from '../../../components/Loader/Loader';
 
 export default function ListOfPodcasts() {
-	const [podcasts, isFetching] = usePodcasts();
+	const [podcasts, isLoading] = usePodcasts();
 	return (
 		<section>
-			{isFetching ? (
+			{isLoading ? (
 				<Loader />
 			) : (
 				<ul className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-6 gap-y-20'>

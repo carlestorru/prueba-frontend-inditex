@@ -5,12 +5,15 @@ const PodcastsContext = createContext();
 
 export function PodcastsProvider({ children }) {
 	const [podcasts, setPodcasts] = useState([]);
-	const [data, isFetching] = useFetchPodcasts();
+	const { isLoading, error, data } = useFetchPodcasts();
+
+	if (error) {
+		console.error(error.message);
+	}
 
 	useEffect(() => {
-		if (!isFetching) setPodcasts(data);
-		console.log(data);
-	}, [isFetching]);
+		if (!isLoading) setPodcasts(data);
+	}, [isLoading]);
 
 	const searchFilterPodcasts = (text) => {
 		const textToLowerCase = text.toLowerCase();
@@ -24,7 +27,7 @@ export function PodcastsProvider({ children }) {
 
 	return (
 		<PodcastsContext.Provider
-			value={[podcasts, isFetching, searchFilterPodcasts]}>
+			value={[podcasts, isLoading, searchFilterPodcasts]}>
 			{children}
 		</PodcastsContext.Provider>
 	);
