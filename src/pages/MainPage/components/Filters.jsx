@@ -1,7 +1,7 @@
 import { usePodcasts } from '../../../context/PodcastsContext';
 
 export default function Filters() {
-	const [podcasts, , searchFilterPodcasts] = usePodcasts();
+	const {podcasts, searchFilterPodcasts} = usePodcasts();
 
 	return (
 		<section className='self-end'>
