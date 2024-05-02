@@ -9,7 +9,7 @@ export default function EpisodeDetails() {
 			<Card>
 				<div className='p-2'>
 					<h3 className='font-bold text-lg py-2'>{state.trackName}</h3>
-					<p className='italic'>{state.description}</p>
+					<div className='italic' dangerouslySetInnerHTML={{ __html: state.description }} />
                     <audio className='m-auto mt-8 py-2 w-full' src={state.episodeUrl} controls={true}></audio>
 				</div>
 			</Card>
