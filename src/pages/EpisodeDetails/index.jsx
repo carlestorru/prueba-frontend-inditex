@@ -5,7 +5,7 @@ export default function EpisodeDetails() {
 	const { state } = useLocation();
 
 	return (
-		<section>
+		<section className='w-2/4 max-sm:w-full'>
 			<Card>
 				<div className='p-2'>
 					<h3 className='font-bold text-lg py-2'>{state.trackName}</h3>
