@@ -2,7 +2,7 @@ import fetchAllOrigins from '../services/fetchAllOrigins';
 import { useQuery } from 'react-query';
 
 export default function useFetchPodcastDetails(podcastId) {
-	const URL = `https://itunes.apple.com/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=20`;
+	const URL = `${process.env.REACT_APP_ITUNES_URL}/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=20`;
 
 	return useQuery({
 		queryKey: ['podcastDetail', podcastId],

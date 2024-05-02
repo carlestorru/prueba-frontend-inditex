@@ -3,7 +3,7 @@ import fetchAllOrigins from '../services/fetchAllOrigins';
 import { useQuery } from 'react-query';
 
 const URL =
-	'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json';
+	`${process.env.REACT_APP_ITUNES_URL}/us/rss/toppodcasts/limit=100/genre=1310/json`;
 
 export default function useFetchPodcasts() {
 	return useQuery({
