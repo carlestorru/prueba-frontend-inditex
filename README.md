@@ -30,7 +30,7 @@ Your app is ready to be deployed!
 
 After install `npm install serve -g`
 
-Once is installed: `serve -s build`
+Once is installed: `serve -s build` and check the terminal to see the url for open the app.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
