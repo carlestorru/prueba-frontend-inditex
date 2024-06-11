@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom'; // Si estás usando React Router
-import App from '../App';
-import MainPage from '../pages/MainPage';
+import App from '../../App';
+import MainPage from '../../pages/MainPage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { act } from 'react';
 

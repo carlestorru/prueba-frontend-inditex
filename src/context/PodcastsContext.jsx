@@ -27,7 +27,7 @@ export function PodcastsProvider({ children }) {
 
 	return (
 		<PodcastsContext.Provider
-			value={{podcasts, isLoading, searchFilterPodcasts}}>
+			value={{ podcasts, isLoading, searchFilterPodcasts }}>
 			{children}
 		</PodcastsContext.Provider>
 	);

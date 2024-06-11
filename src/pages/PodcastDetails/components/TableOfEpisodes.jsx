@@ -8,7 +8,7 @@ export default function TableOfEpisodes({ episodes, state }) {
 
 	return (
 		<Card>
-			<table className='text-left w-full'>
+			<table className='w-full text-left'>
 				<thead>
 					<tr className='border-b border-gray-300'>
 						<th>Title</th>
@@ -21,7 +21,7 @@ export default function TableOfEpisodes({ episodes, state }) {
 						<tr
 							key={el.trackId}
 							className={`border-b border-gray-300 ${index % 2 === 0 && 'bg-gray-200'}`}>
-							<td className='text-blue-400 py-2'>
+							<td className='py-2 text-blue-400'>
 								<Link
 									to={`${pathname}/episode/${el.trackId}`}
 									state={{

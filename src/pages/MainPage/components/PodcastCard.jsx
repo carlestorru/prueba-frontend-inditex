@@ -2,9 +2,9 @@ import Card from '../../../components/Card';
 
 export default function PodcastCard({ data }) {
 	return (
-		<div className='flex flex-col items-center text-center m-auto hover:scale-110 transition duration-300'>
+		<div className='m-auto flex flex-col items-center text-center transition duration-300 hover:scale-110'>
 			<img
-				className='rounded-full -mb-8 z-10 h-20 w-20'
+				className='z-10 -mb-8 h-20 w-20 rounded-full'
 				src={data['im:image'][0].label}
 				alt={data['im:name'].label}
 			/>

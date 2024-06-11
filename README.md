@@ -1,6 +1,6 @@
-# Podcaster 
+# Podcaster
 
-## Getting Started 
+## Getting Started
 
 Run `npm install` for init the project with all necessary dependencies.
 
@@ -34,10 +34,9 @@ Once is installed: `serve -s build` and check the terminal to see the url for op
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Run tests 
+### Run tests
 
 #### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-

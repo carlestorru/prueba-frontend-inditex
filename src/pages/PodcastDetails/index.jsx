@@ -16,7 +16,7 @@ export default function PodcastDetails() {
 					<Loader />
 				</div>
 			) : (
-				<div className='flex flex-col gap-2 w-2/4 max-sm:w-full'>
+				<div className='flex w-2/4 flex-col gap-2 max-sm:w-full'>
 					<EpisodesBanner numEpisodes={data.results[0].trackCount} />
 					<TableOfEpisodes
 						episodes={data.results.filter(

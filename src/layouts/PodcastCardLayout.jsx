@@ -4,10 +4,10 @@ import Card from '../components/Card';
 export default function PodcastCardLayout() {
 	const { state: data } = useLocation();
 	return (
-		<main className='flex flex-row max-sm:flex-col justify-evenly p-4 gap-2'>
+		<main className='flex flex-row justify-evenly gap-2 p-4 max-sm:flex-col'>
 			<section>
 				<Card>
-					<div className='flex flex-col gap-2 p-2 w-[300px]'>
+					<div className='flex w-[300px] flex-col gap-2 p-2'>
 						<div className='border-b-[1px] border-gray-400'>
 							<Link
 								to={`/podcast/${data.id.attributes['im:id']}`}
@@ -23,14 +23,14 @@ export default function PodcastCardLayout() {
 							<Link
 								to={`/podcast/${data.id.attributes['im:id']}`}
 								state={{ ...data }}>
-								<h3 className='font-bold text-xl'>{data['im:name'].label}</h3>
+								<h3 className='text-xl font-bold'>{data['im:name'].label}</h3>
 								<h4 className='font-normal italic'>
 									by {data['im:artist'].label}
 								</h4>
 							</Link>
 						</div>
 						<div>
-							<h5 className='font-bold text-wrap'>Description:</h5>
+							<h5 className='text-wrap font-bold'>Description:</h5>
 							<p>{data.summary.label}</p>
 						</div>
 					</div>

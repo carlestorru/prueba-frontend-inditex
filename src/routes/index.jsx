@@ -17,21 +17,21 @@ const ListOfRoutes = [
 		children: [
 			{
 				path: '/',
-				element: <MainPage />
+				element: <MainPage />,
 			},
-            {
+			{
 				path: 'podcast/:podcastId',
 				element: <PodcastCardLayout />,
 				children: [
 					{
 						path: '',
-						element: <PodcastDetail />
+						element: <PodcastDetail />,
 					},
 					{
 						path: 'episode/:episodeId',
-						element: <EpisodeDetail />
-					}
-				]
+						element: <EpisodeDetail />,
+					},
+				],
 			},
 		],
 	},

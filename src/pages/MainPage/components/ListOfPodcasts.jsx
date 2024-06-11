@@ -13,7 +13,7 @@ export default function ListOfPodcasts() {
 			) : (
 				<ul className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-6 gap-y-20'>
 					{podcasts.length === 0 ? (
-						<p className='font-bold m-auto'>No podcasts found</p>
+						<p className='m-auto font-bold'>No podcasts found</p>
 					) : (
 						podcasts.map((el) => {
 							return (
